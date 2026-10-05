@@ -27,7 +27,7 @@
 .hero-aside>div span{font:600 11px Inter,Arial,sans-serif;color:var(--ice)}
 .hero-aside>div p{font:500 14px/1.35 Inter,Arial,sans-serif;margin:0;color:#e0e9ee}
 .hero-photo{margin-top:0;margin-bottom:0;position:relative;overflow:hidden;background:#10191f}
-.hero-photo img{display:block;width:100%;height:auto;aspect-ratio:2/1;object-fit:cover}
+.hero-photo img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
 .hero-photo figcaption{display:flex;justify-content:space-between;gap:var(--space-2);padding:14px 0 0;color:#a5b8c3;font:600 10px/1.4 Inter,Arial,sans-serif;letter-spacing:.14em}
 .steps-grid{gap:var(--space-4);margin-top:var(--space-6)}
 .step-card{min-height:0;padding:var(--space-3) 0 0;border:0;border-top:1px solid #b8cbd5;border-radius:0;background:transparent}
@@ -42,7 +42,7 @@
 .store-badge--apk .store-badge-icon{width:32px;height:32px;flex:none;color:#57b8ee}
 .nav a:focus-visible,.text-link:focus-visible{outline-color:var(--ice)}
 @media(max-width:950px){.hero-grid{grid-template-columns:minmax(0,1fr) 220px;gap:var(--space-4)}.hero h1{font-size:clamp(70px,8.5vw,95px)}.privacy-layout{grid-template-columns:50px 1fr}.privacy-layout .button{grid-column:2}}
-@media(max-width:700px){.hero{padding-bottom:var(--space-4)}.hero-grid{grid-template-columns:1fr;gap:0}.hero-copy{padding:var(--space-6) 0 var(--space-5)}.hero h1{font-size:clamp(68px,14vw,94px)}.hero-note{margin-top:var(--space-4)}.hero-aside{display:none}.hero-photo img{aspect-ratio:4/3;object-position:center}.hero-photo figcaption{font-size:9px}.steps-grid{gap:var(--space-4);margin-top:var(--space-5)}.step-card{padding-top:var(--space-2)}.step-number{margin-bottom:var(--space-3)}.privacy-layout{grid-template-columns:1fr}.privacy-index{display:none}.privacy-layout .button{grid-column:1}}
+@media(max-width:700px){.hero{padding-bottom:var(--space-4)}.hero-grid{grid-template-columns:1fr;gap:0}.hero-copy{padding:var(--space-6) 0 var(--space-5)}.hero h1{font-size:clamp(68px,14vw,94px)}.hero-note{margin-top:var(--space-4)}.hero-aside{display:none}.hero-photo img{aspect-ratio:941/1672;object-fit:contain}.hero-photo figcaption{font-size:9px}.steps-grid{gap:var(--space-4);margin-top:var(--space-5)}.step-card{padding-top:var(--space-2)}.step-number{margin-bottom:var(--space-3)}.privacy-layout{grid-template-columns:1fr}.privacy-index{display:none}.privacy-layout .button{grid-column:1}}
 @media(max-width:390px){.hero h1{font-size:clamp(60px,14.5vw,68px)}.hero-photo figcaption span:last-child{display:none}}
 
 /* Light chrome for the supplied dark-on-transparent wordmark */
