@@ -56,3 +56,15 @@
 .site-footer .brand img{width:220px;height:auto}
 @media(max-width:700px){.site-header .brand img{width:210px;height:auto}.site-footer .brand img{width:200px;height:auto}}
 @media(max-width:390px){.site-header .brand img{width:190px}}
+
+/* Shared CTA sizing */
+:root{--control-height:48px;--control-radius:8px;--control-padding:20px}
+.button{height:var(--control-height);min-height:var(--control-height);padding-inline:var(--control-padding);gap:12px;border-radius:var(--control-radius);line-height:1}
+.button--small{height:var(--control-height);min-height:var(--control-height);padding-inline:18px;gap:12px}
+.button--ghost{background:transparent;border-color:rgba(199,238,255,.45);color:var(--paper)}
+.button--ghost:hover{background:rgba(199,238,255,.1)}
+.hero-actions{gap:12px}
+.hero-actions .button{min-width:190px}
+.store-badge{height:76px;min-height:76px;border-radius:8px}
+.button--dark{margin-top:var(--space-3)}
+@media(max-width:700px){.header-inner>.button{height:44px;min-height:44px;padding-inline:14px}.hero-actions .button{width:100%;min-width:0}}
