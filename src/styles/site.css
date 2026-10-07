@@ -1073,6 +1073,21 @@ h3 {
 }
 
 /* Shared CTA sizing */
+/* Prevent accidental text selection on phones while preserving editable controls. */
+@media (max-width: 700px) and (hover: none) and (pointer: coarse) {
+  body {
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  input,
+  textarea,
+  [contenteditable]:not([contenteditable='false']) {
+    -webkit-user-select: text;
+    user-select: text;
+  }
+}
+
 :root {
   --control-height: 48px;
   --control-radius: 8px;
