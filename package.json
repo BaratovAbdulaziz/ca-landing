@@ -1,0 +1,20 @@
+{
+  "name": "counter-arena-website",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/serve.mjs --watch",
+    "preview": "node scripts/serve.mjs",
+    "check": "npm run build && node scripts/check.mjs",
+    "format": "prettier --write src scripts docs README.md FEATURES.md package.json .prettierrc.json",
+    "format:check": "prettier --check src scripts docs README.md FEATURES.md package.json .prettierrc.json"
+  },
+  "devDependencies": {
+    "prettier": "3.6.2"
+  }
+}
