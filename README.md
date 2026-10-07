@@ -53,7 +53,7 @@ npm run deploy:check  # Validate the site and Wrangler config without publishing
 npm run deploy        # Build, validate, and publish to Cloudflare
 ```
 
-`wrangler.jsonc` deploys `dist/` as Workers Static Assets under the Worker name `counter-arena-landing`. The custom domain is `contourarena.com`, exactly as supplied by the owner. Wrangler also provides a `workers.dev` address. Custom domains require an active Cloudflare DNS zone in the account used to deploy; Cloudflare provisions DNS and a TLS certificate. If several accounts are available, set `CLOUDFLARE_ACCOUNT_ID` in your shell to select the one owning the zone. Never commit tokens or login credentials.
+`wrangler.jsonc` deploys `dist/` as Workers Static Assets under the Worker name `counter-arena-landing`. The custom domain is `counterarena.com`, verified as an active zone in the configured Cloudflare account. Wrangler also provides a `workers.dev` address. The account ID is pinned in the configuration; it is a public identifier, not a credential. Cloudflare provisions DNS and a TLS certificate when deploying the custom domain. Never commit tokens or login credentials.
 
 Use `npm run cf:dev` to preview through the Cloudflare runtime. The original `npm run dev` remains the lightweight source-watching preview. Wrangler runs the build automatically before previewing or deploying.
 

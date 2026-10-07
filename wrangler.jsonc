@@ -1,6 +1,7 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "counter-arena-landing",
+  "account_id": "58d7c332d636e0de30e91d75c4f22dbc",
   "compatibility_date": "2026-10-07",
   "workers_dev": true,
   "build": {
@@ -13,7 +14,7 @@
   },
   "routes": [
     {
-      "pattern": "contourarena.com",
+      "pattern": "counterarena.com",
       "custom_domain": true,
     },
   ],
