@@ -43,13 +43,20 @@ The build copies `public/` into `dist/`, renders shared partials around each pag
 
 Use the existing spacing and color variables at the top of `site.css`. Standard CTAs use `.button` plus a color variant; store download badges use `.store-badge`. The styles preserve the existing responsive design and cascade. Keep Features page styling in its own file and shared components in `site.css`.
 
-## Build and publish
+## Cloudflare deployment
 
 ```sh
 npm ci
-npm run check
+npm run cf:login      # One-time browser authorization on this Mac
+npm run cf:whoami     # Confirm account and permissions
+npm run deploy:check  # Validate the site and Wrangler config without publishing
+npm run deploy        # Build, validate, and publish to Cloudflare
 ```
 
-Publish `dist/` as static files. Existing Sites configuration is in `.openai/hosting.json` and still points to `dist/`. Always build before publishing. Generated output, local deployment archives, dependencies, and environment secrets are ignored by Git. Old deployment archives are retained locally in `archive/`.
+`wrangler.jsonc` deploys `dist/` as Workers Static Assets under the Worker name `counter-arena-landing`. The custom domain is `contourarena.com`, exactly as supplied by the owner. Wrangler also provides a `workers.dev` address. Custom domains require an active Cloudflare DNS zone in the account used to deploy; Cloudflare provisions DNS and a TLS certificate. If several accounts are available, set `CLOUDFLARE_ACCOUNT_ID` in your shell to select the one owning the zone. Never commit tokens or login credentials.
 
-GitHub Actions runs formatting and site validation on pushes and pull requests. Source repository: [BaratovAbdulaziz/ca-landing](https://github.com/BaratovAbdulaziz/ca-landing). The Git remote uses SSH.
+Use `npm run cf:dev` to preview through the Cloudflare runtime. The original `npm run dev` remains the lightweight source-watching preview. Wrangler runs the build automatically before previewing or deploying.
+
+The previous Sites configuration remains in `.openai/hosting.json` for the existing hosted copy. Deploy with Wrangler for the new Cloudflare domain. Generated output, local deployment archives, dependencies, Wrangler state, and environment secrets are ignored by Git. Old deployment archives are retained locally in `archive/`.
+
+GitHub Actions runs formatting and a deployment dry run on pushes and pull requests; it does not publish or need Cloudflare credentials. Source repository: [BaratovAbdulaziz/ca-landing](https://github.com/BaratovAbdulaziz/ca-landing). The Git remote uses SSH.
