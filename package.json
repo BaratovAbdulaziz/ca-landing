@@ -20,9 +20,7 @@
     "format:check": "prettier --check src scripts docs README.md FEATURES.md package.json .prettierrc.json wrangler.jsonc"
   },
   "overrides": {
-    "miniflare": {
-      "sharp": "0.35.5"
-    }
+    "sharp": "0.35.5"
   },
   "devDependencies": {
     "prettier": "3.6.2",
